@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Webcomponent</title>
+    <script type="text/javascript" src="item-details.js"></script>
+    <style>
+    	#container{
+    		background-color: red;
+    		color: ;
+    	}
+
+    	.btn{
+    		background-color: pink;
+    	}
+	</style>
+</head>
+
+<body>
+    <h1 style="">Welcome in webcomponent</h1>
+    <item-details name="First item satyendra" id="itemDetails"></item-details>
+	<div id="parent"></div>
+    <script>
+    	const element = document.createElement('p');
+    	element.textContent = 'Hello Created by js';
+    	element.innerHTML = '<strong>Hello</strong> I am created from <i>JS</i>';
+    	const parent = document.querySelector('#parent');
+    	parent.appendChild(element);
+    	// element.connectedCallback();
+
+    	document.querySelector('h1').style.backgroundColor ="Yellow";
+    	const itemDetails = document.querySelector('#itemDetails');
+    	console.log(itemDetails);
+    	itemDetails.name = "Set from parent page 44";
+    </script>
+</body>
+
+</html>
